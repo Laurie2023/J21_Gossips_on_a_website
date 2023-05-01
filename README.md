@@ -16,6 +16,8 @@ A noter qu'il est possible de modifier un potin déjà présent dans la base de 
 - 5 fichiers View (ruby) : l'accueil, les page de chaque potin, la page d'ajout d'un nouveau potin, la page d'ajout d'un nouveau commentaire et la page de modification d'un potin,
 - 2 fichiers Base de données (csv) : une pour stocker les potins et l'autre pour les commentaires. 
 
+Website : http://localhost:4567
+
 # Gemfile
 source "https://rubygems.org"
 ruby '3.0.0'
