@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>PAGE POTIN</title>
+  </head>
+  <body>
+    <h1>Voici la page du potin n°
+      <%= id %><br/>
+    </h1>
+    <h2>Description</h2>
+    <p><u>Son auteur :</u> 
+      <%= a_gossip.author %><br/>
+      <u>Le contenu du potin :</u>
+      <%= a_gossip.content %><br/><br/>
+      <a href="http://localhost:4567/<%= id %>/edit"> Editer ce gossip</a><br/>
+      </p>
+
+      <h2>Commentaires</h2>
+      <% comments.select{|comment|comment.index_gossip == id}.each_with_index do |comment| %>
+        <p>
+          "<%= comment.comment_content %>     "
+          <em>Ecrit par <%= comment.comment_author %><br/></em>
+        <% end %>
+        </p>
+      <% if comments.select{|comment|comment.index_gossip == id}.length == 0 %>
+        <p>Aucun commentaire pour le moment.</p>
+      <% end %>
+      <p>
+        <a href="http://localhost:4567/<%= id %>/newcomment"> Ajouter un commentaire</a><br/>
+      </p>
+      
+
+    <a href="/">Lien pour revenir à la page des potins</a>
+  </body>
+</html>
